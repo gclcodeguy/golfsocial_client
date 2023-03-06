@@ -8,7 +8,7 @@ import {
   Divider,
   Typography,
   InputBase,
-  useTheme, 
+  useTheme,
   Button,
   IconButton,
 } from "@mui/material";
@@ -41,7 +41,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`http://localhost:3001/posts`, {
+    const response = await fetch(`https://golf-social.herokuapp.com/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
@@ -136,7 +136,7 @@ const MyPostWidget = ({ picturePath }) => {
             color: palette.neutral.dark,
             backgroundColor: palette.primary.light,
             borderRadius: "3rem",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
         >
           Post
